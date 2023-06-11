@@ -1,5 +1,4 @@
 import configparser
-
 import paramiko
 
 
@@ -40,6 +39,7 @@ class SSHClient(object):
 def main():
     cmd = "pwd"
     client = SSHClient('ssh1')
+    client.run_cmd(cmd)
     stdout, stderr = client.run_cmd(cmd)
     print(stdout, stderr)
 
